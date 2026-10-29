@@ -1,7 +1,8 @@
 services:
   odoo:
     container_name: odoo
-    image: odoo:17.0
+    command: odoo --http-interface=0.0.0.0
+    image: odoo:20.0
     env_file: .env
     ports:
       - "8069:8069"
